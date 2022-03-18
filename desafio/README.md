@@ -11,7 +11,7 @@
 
 ## Desafio ClubPetro
 
-Para esse desafio foi utilizado o framework [NestJs](https://github.com/nestjs/nest) com Typescript e [Docker](https://www.docker.com/)
+Para esse desafio foi utilizado o framework [NestJs](https://github.com/nestjs/nest) com Typescript, [TypeORM](https://typeorm.io/#/) e [Docker](https://www.docker.com/)
 
 O projeto consiste em 3 containers:
 - app (backend nest da aplicação) acesso -> http://localhost:3000
@@ -21,7 +21,7 @@ O projeto consiste em 3 containers:
 
 ## Rodar aplicação
 
-Para rodar a aplicação é necessário ter o Docker instalado na máquina, basta rodar o comando em um terminal na raiz do projeto:
+Para rodar a aplicação é necessário ter o Docker e o [Docker Compose](https://docs.docker.com/compose/install/) instalado na máquina, basta rodar o comando em um terminal na raiz do projeto:
 
 ```bash
 $ docker-compose up -d --build
