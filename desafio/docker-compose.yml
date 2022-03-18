@@ -1,0 +1,31 @@
+version: '3.3'
+services:
+  db:
+    container_name: db
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile_db
+    ports:
+      - 5432:5432
+    tty: true
+    stdin_open: true
+
+  pgadmin:
+    container_name: pgadmin
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile_pgadmin
+    ports:
+      - 8080:80
+
+  app:
+    container_name: app
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile_app
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
